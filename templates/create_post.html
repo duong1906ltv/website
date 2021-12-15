@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+  <div class="container" id="create-post">
+  
+    <article class="card card-outline mb-4 mt-4">
+      <div class="card-body">
+        <header>
+          <h2 class="card-title">Create a Post</h2>
+        </header>
+        <form method="POST" enctype="multipart/form-data">
+  
+          <div class="mb-3">
+            <label for="formTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="formTitle" name="title">
+          </div>
+          <div class="mb-3">
+            <label for="formTitle" class="form-label">Content</label>
+            <input type="text" class="form-control" id="formTitle" name="content">
+          </div>
+  
+          <div class="mb-3">
+            <label for="formBody" class="form-label">Body</label>
+            <textarea class="form-control" name = "body" id="formBody" rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 35px;"></textarea>
+          </div>
+  
+          <div class="mb-3">
+            <label for="formCategory" class="form-label">Category</label>
+            <select class="form-select" id="formCategory" name = "category">
+              <option selected="">Choose a Category</option>
+              <option value="Food & Drinks">Food & Drinks</option>
+              <option value="Journey">Journey</option>
+              <option value="Lifestyle">Lifestyle</option>
+              <option value="Photography">Photography</option>
+              <option value="WorK">WorK</option>
+            </select>
+          </div>
+  
+          <div class="mb-3 form-uploa">
+            <!-- <label for="formImage" class="form-label">Upload Image</label>
+            <input class="form-control" type="file" id="formImage"> -->
+            <label for="formImage" class="form-label">Upload Image</label>
+            <div class="center">
+              <div class="form-input">
+                <div class="preview">
+                  <img id="formImage-preview">
+                </div>
+                <input type="file" name="inputImage" id="formImage" accept="image/*" onchange="showPreview(event);">
+              </div>
+            </div> 
+          </div>
+          <div>
+            <button type="submit" class="btn btn-lg btn-dark">Post</button>
+          </div>
+        </form>
+      </div>
+    </article><!-- /.card -->
+  
+  </div>
+  <div align="center">
+    <a href="/home"><button type="button" class="btn btn-lg btn-light btn-back">Back</button></a>
+  </div>
+  {% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+  %}
+  
+  <div class="container" id="login">
+    <article class="card card-outline mb-4 mt-4 text-center">
+      <div class="text-center">
+        <img class="me-3 rounded-circle" src="https://www.seekpng.com/png/detail/875-8753366_flask-framework-logo-svg.png" alt="Paula" width="100" height="100">
+      </div>
+      <div class="card-body">
+        <header class="mb-3">
+          <h2 class="card-title">LOGIN</h2>
+        </header>
+        <form method="POST">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+    
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
+          <a href="/reset" class="link-primary">Forgot password?</a>
+          <div>
+            <button type="submit" class="btn btn-lg btn-dark mt-3 mb-3">Login</button>
+          </div>
+          <span>Not a member? <a href="#" class="link-primary">Sign up now</a></span>
+        </form>
+      </div>
+    </article>
+  </div>
+  {% endblock %}

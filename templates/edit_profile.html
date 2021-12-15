@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <div class="page-header">
+            <h1>Edit Your Profile</h1>
+        </div>
+        <form method="POST" class="form-signin" style="color:white">
+            {{ form.hidden_tag() }}
+            <br>
+            {{ form.name.label() }}
+            {{ form.name(class="form-control", placeholder="Dinh Duong") }}
+
+            {{ form.location.label() }}
+            {{ form.location(class="form-control", placeholder="Da Nang, Viet Nam") }}
+
+            {{ form.about_me.label() }}
+            {{ form.about_me(class="form-control", placeholder="Python") }}
+
+
+            <br>
+
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}

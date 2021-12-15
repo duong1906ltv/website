@@ -1,0 +1,116 @@
+.navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    background: rgb(144, 224, 239);
+    background: linear-gradient(
+      156deg,
+      rgba(144, 224, 239, 1) 0%,
+      rgba(0, 119, 182, 1) 100%
+    );
+    background-repeat: no-repeat;
+    color: #212529;
+  }
+  
+  /* -------------- Post Content ----------- */
+  
+  .card {
+    padding: 1.5rem;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .card-header {
+    background-color: #fff;
+    border-bottom: none;
+  }
+  
+  #home .card a:not(.btn),
+  #create-post .card a:not(.btn),
+  #details .card a:not(.btn) {
+    color: inherit;
+  }
+  
+  .card-header a {
+    text-decoration: none;
+  }
+  
+  /* -------x------- Post Content ------x----- */
+  
+  /* -------------- Form ----------- */
+  
+  form {
+    min-height: max-content;
+  }
+  
+  #login .form-control,
+  #signup .form-control {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .btn.btn-back {
+    border: none;
+    min-width: 10rem;
+    transition: all ease 0.2s;
+  }
+  
+  .btn.btn-back:hover {
+    background: rgb(144, 224, 239);
+    background: linear-gradient(
+      156deg,
+      rgba(144, 224, 239, 1) 0%,
+      rgba(0, 119, 182, 1) 100%
+    );
+    color: #fff;
+  }
+  
+  /* -------------- Form ----------- */
+  
+  /* -------------- Image upload ----------- */
+  .form-input {
+    max-width: 350px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.1),
+      3px 3px 7px rgba(94, 104, 121, 0.1);
+  }
+  
+  .form-input img {
+    width: 100%;
+    display: none;
+    margin-bottom: 30px;
+  }
+  
+  .form-input input {
+    /* display: none; */
+  }
+  
+  button[type="submit"] {
+    width: 10rem;
+  }
+  
+  #login .card a:not(button) {
+    background: -webkit-linear-gradient(
+      156deg,
+      rgba(144, 224, 239, 1) 0%,
+      rgba(0, 119, 182, 1) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* -------x------- Image upload -----x------ */
+  
+  @media screen and (max-width: 768px) {
+    #login .form-control,
+    #signup .form-control {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    button[type="submit"] {
+      width: 100%;
+    }
+  }

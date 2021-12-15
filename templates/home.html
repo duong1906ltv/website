@@ -1,0 +1,149 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<main class="main pt-4">
+
+    <div class="container" id="home">
+
+      <div class="row">
+        <div class="col-md-9">
+            {%for post in posts%}
+            <article class="card mb-4">
+                <header class="card-header">
+                  <div class="card-meta">
+                    <a href="#"><time class="timeago" datetime="2021-09-26 20:00" timeago-id="1">Posted on {{post.timestamp}}</time></a> by <a href="#">{{post.username}}</a>
+                  </div>
+                  <a href="/details">
+                    <h4 class="card-title">c</h4>
+                  </a>
+                </header>
+                <a href="/details">
+                  <img class="card-img" src="{{post.image}}" alt="">
+                </a>
+                <div class="card-body">
+                  <p class="card-text">{{post.content}}</p>
+                </div>
+                <a class="btn btn-dark" role="button" style="width: 10rem;" href="/posts/{{post.id}}">Read more</a>
+              </article><!-- /.card -->
+            {%endfor%}
+
+          <article class="card mb-4">
+            <header class="card-header">
+              <div class="card-meta">
+                <a href="#"><time class="timeago" datetime="2021-09-26 20:00" timeago-id="1">a</time></a> by <a href="#">Journey</a>
+              </div>
+              <a href="/details">
+                <h4 class="card-title">c</h4>
+              </a>
+            </header>
+            <a href="/details">
+              <img class="card-img" src="https://milo.bootlab.io/img/articles/8.jpg" alt="">
+            </a>
+            <div class="card-body">
+              <p class="card-text">l</p>
+            </div>
+            <a class="btn btn-dark" role="button" style="width: 10rem;" href="/details">Read more</a>
+          </article><!-- /.card -->
+        
+          <article class="card mb-4">
+            <header class="card-header">
+              <div class="card-meta">
+                <a href="#"><time class="timeago" datetime="2021-09-03 20:00" timeago-id="2">3 months ago</time></a> in <a href="#">Lifestyle</a>
+              </div>
+              <a href="/details">
+                <h4 class="card-title">Oh, I guess they have the blues</h4>
+              </a>
+            </header>
+            <a href="/details">
+              <img class="card-img" src="https://milo.bootlab.io/img/articles/22.jpg" alt="">
+            </a>
+            <div class="card-body">
+              <p class="card-text">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. </p>
+            </div>
+            <a class="btn btn-dark" role="button" style="width: 10rem;" href="/details">Read more</a>
+          </article><!-- /.card -->
+
+          <article class="card mb-4">
+            <header class="card-header">
+              <div class="card-meta">
+                <a href="#"><time class="timeago" datetime="2021-07-16 20:00" timeago-id="3">4 months ago</time></a> in <a href="#">Work</a>
+              </div>
+              <a href="/details">
+                <h4 class="card-title">How can we, how can we sing about ourselves?</h4>
+              </a>
+            </header>
+            <a href="/details">
+              <img class="card-img" src="https://milo.bootlab.io/img/articles/19.jpg" alt="">
+            </a>
+            <div class="card-body">
+              <p class="card-text">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. </p>
+            </div>
+            <a class="btn btn-dark" role="button" style="width: 10rem;" href="/details">Read more</a>
+          </article><!-- /.card -->
+
+
+          <article class="card mb-4">
+            <header class="card-header">
+              <div class="card-meta">
+                <a href="#"><time class="timeago" datetime="2021-09-15 20:00" timeago-id="4">2 months ago</time></a> in <a href="#">Lifestyle</a>
+              </div>
+              <a href="/details">
+                <h4 class="card-title">The king is made of paper</h4>
+              </a>
+            </header>
+            <a href="/details">
+              <img class="card-img" src="https://milo.bootlab.io/img/articles/3.jpg" alt="">
+            </a>
+            <div class="card-body">
+              <p class="card-text">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. </p>
+            </div>
+            <a class="btn btn-dark" role="button" style="width: 10rem;" href="/details">Read more</a>
+          </article><!-- /.card -->
+
+        </div>
+        <div class="col-md-3 ms-auto">
+
+          <aside class="sidebar">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h4 class="card-title">About</h4>
+                <p class="card-text">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam <a href="#">semper libero</a>, sit amet adipiscing sem neque sed ipsum. </p>
+              </div>
+            </div><!-- /.card -->
+          </aside>
+
+          <aside class="sidebar sidebar-sticky">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h4 class="card-title">Tags</h4>
+                <a class="btn btn-light btn-sm mb-1" href="#">Journey</a>
+                <a class="btn btn-light btn-sm mb-1" href="#">Work</a>
+                <a class="btn btn-light btn-sm mb-1" href="#">Lifestype</a>
+                <a class="btn btn-light btn-sm mb-1" href="#">Photography</a>
+                <a class="btn btn-light btn-sm mb-1" href="#">Food &amp; Drinks</a>
+              </div>
+            </div><!-- /.card -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h4 class="card-title">Popular stories</h4>
+
+                <a href="/details" class="d-inline-block">
+                  <h4 class="h6">The blind man</h4>
+                  <img class="card-img" src="https://milo.bootlab.io/img/articles/2.jpg" alt="">
+                </a>
+                <time class="timeago" datetime="2021-09-03 20:00" timeago-id="5">3 months ago</time> in Lifestyle
+
+                <a href="/details" class="d-inline-block mt-3">
+                  <h4 class="h6">Crying on the news</h4>
+                  <img class="card-img" src="https://milo.bootlab.io/img/articles/3.jpg" alt="">
+                </a>
+                <time class="timeago" datetime="2021-07-16 20:00" timeago-id="6">4 months ago</time> in Work
+
+              </div>
+            </div><!-- /.card -->
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+    {% endblock %}
